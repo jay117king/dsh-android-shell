@@ -1,0 +1,31 @@
+{
+  "name": "DSH Android Shell",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installGradle": true
+    },
+    "ghcr.io/devcontainers/features/android-sdk:1": {
+      "platform": "35",
+      "buildTools": "35.0.0"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "mathiasfrohlich.Kotlin",
+        "redhat.java",
+        "vscjava.vscode-gradle"
+      ],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic"
+      }
+    }
+  },
+  "postCreateCommand": "echo '\n\n✅ Codespace ready! Open app/ folder and start coding.\n'",
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}
